@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Student Reflection - Course Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-brand">
+                <div class="brand-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h1 class="brand-title">Student Reflection Portal</h1>
+            </div>
+            <div class="language-switcher">
+                <div class="dropdown">
+                    <button class="dropdown-toggle" id="languageDropdown">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang-text">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" id="languageMenu">
+                        <button class="dropdown-item active" data-lang="en">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>English</span>
+                        </button>
+                        <button class="dropdown-item" data-lang="fr">
+                            <i class="fas fa-globe-europe"></i>
+                            <span>Français</span>
+                        </button>
+                        <button class="dropdown-item" data-lang="sw">
+                            <i class="fas fa-globe-africa"></i>
+                            <span>Kiswahili</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="intro-section">
+                <h1 class="page-title" data-i18n="main.title">Course Reflection</h1>
+                <p class="welcome-message" data-i18n="main.welcome">
+                    Welcome to my course reflection page. Below, I'll share my thoughts and experiences from this learning journey.
+                </p>
+            </section>
+
+            <section class="reflection-section">
+                <div class="question-card">
+                    <h2 class="question-title" data-i18n="questions.enjoyment.title">
+                        What did you enjoy most about the course?
+                    </h2>
+                    <div class="answer-content">
+                        <p data-i18n="questions.enjoyment.answer">
+                            I particularly enjoyed the hands-on approach to learning internationalization concepts. The practical exercises helped me understand how real-world applications handle multiple languages and cultural differences. Working with different character encodings and date formats was especially enlightening.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h2 class="question-title" data-i18n="questions.challenge.title">
+                        What was the most challenging part?
+                    </h2>
+                    <div class="answer-content">
+                        <p data-i18n="questions.challenge.answer">
+                            The most challenging aspect was understanding the nuances between internationalization (i18n) and localization (l10n). Initially, I thought they were the same thing, but learning about cultural context, right-to-left languages, and locale-specific formatting really opened my eyes to the complexity involved in creating truly global applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h2 class="question-title" data-i18n="questions.improvement.title">
+                        What could be improved about the course?
+                    </h2>
+                    <div class="answer-content">
+                        <p data-i18n="questions.improvement.answer">
+                            While the course covered the fundamentals well, I would have appreciated more examples of complex scenarios like handling pluralization rules in different languages, or working with currencies and number formatting across various locales. Additionally, more practice with professional i18n libraries and frameworks would have been valuable.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="page-footer">
+                <p class="footer-text" data-i18n="footer.text">
+                    Thank you for taking the time to read my reflection. This page demonstrates basic i18n/l10n implementation using vanilla JavaScript.
+                </p>
+                <p class="current-language">
+                    <span data-i18n="footer.current_language">Current Language:</span>
+                    <span id="current-lang-display">English</span>
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Load translations first, then the main script -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
